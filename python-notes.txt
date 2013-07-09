@@ -9,9 +9,6 @@ pip freeze > requirements.txt
 crtl + L
     -clears the screen
 
-/Users/rgebhard/Projects/pytwilio.db/venv
-    -path to my python virtual enviornment
-
 in the root dir of the repo 
     make install
     make test
@@ -20,7 +17,7 @@ start the virtual env
     venv/bin/python
 
 bring the current object into scope
-    from pytwilio.db.log.call import Call
+    from xxxx.db.log.call import Call
 
 
  
