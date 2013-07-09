@@ -1,0 +1,15 @@
+
+\G
+    -prints things out nicer
+
+show databases;
+    -list all the dbs
+
+use "db_name";
+    -select a db
+
+show tables;
+    -list all the tables in db
+
+explain 
+    -tells you what the sql command will do

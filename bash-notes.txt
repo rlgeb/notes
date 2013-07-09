@@ -1,0 +1,48 @@
+COMMANDS
+grep "search_phrase" "search_doc"
+    -search
+
+ls -l
+    -tells you more about files such as privledges, size ect
+
+cd -
+    -back button for directory you are in 
+
+shift + command + { or }
+    -change termial tabs (left or right)
+
+command + or -
+    -make the txt bigger or smaller
+
+-o "file1, file2, ..."
+    -open multiple files
+
+ctrl-w + v 
+    -split vertically
+
+ctrl-w + s
+    -split horizonally
+
+ps aux
+    -show the running processes
+
+|
+    -pipe command. take output and use it as input for the next command
+
+sv 
+    -process management
+    up : start
+
+sudo
+    -super user privlegdges
+
+pwd 
+    -current directory path
+
+cd 
+    -change directory
+
+ls
+    -list contents
+
+

@@ -1,0 +1,66 @@
+COMMANDS 
+
+--general use--
+
+git clone "repo_url"
+    -makes a copy to the repo in locally
+
+git commit
+    -commits the changes made locally
+    --amend : changes the previous commit to be the current one(overrides it)
+
+git log
+    -displays the commit history
+
+git status
+    -changes to be commited, shows chnages not staged for commit, untracked files
+
+git add "file_name"
+    -addes the file_name to the changes to be commited section
+
+git checkout "file_name"
+    -checkouts out the file_name from the master
+    -can use this to revert to the last commited version of a file
+
+git reset HEAD "file_name"
+    -resets the HEAD pointer to the previous version of the file
+    -esentially the same as above, used to revert to last committed version
+
+git diff "file_name"
+    -shows the changes to a file since the last commit
+
+
+--tagging--
+marker for a version in git that cannont change use them to checkout or for creating branches
+    git tag "name_of_tag"
+
+
+
+--forking--
+1. go to the git repo online and click the fork button
+2. this creates a cloud copy of the repo for you to make changes to
+3. once you are done go back to your fork of repo and select the branch you pushed 
+4. click the pull button to submit a pull request 
+
+git remote -v
+    -lists all of the remote repos
+
+git remote fetch "remote_name"
+    -changes remote in use
+
+git remote add "remote_name" "remote_url"
+    -addes the remote 
+
+git remote rm "remote_name"
+    -removes the remote
+
+git push "remote_name" "branch_name"
+    -pushes the changes of branch_name to remote_name
+    -f : push forcefully.  use if cloud and local get out of
+    sync, like if you use --ammend on a commit.
+
+
+
+
+
+

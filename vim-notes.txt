@@ -1,0 +1,56 @@
+SHORT CUTS
+
+# + command 
+    -repeats command # times
+
+--naviagtion--
+G
+    -end of the file
+H
+    -begining of a file
+ctrl + f
+    -forward one page
+ctrl + b 
+    -backwards one page
+ctrl + y
+    -line up
+ctrl + e
+    -line down
+j
+    -down one line
+k
+    -up one line
+h
+    -left one char
+l
+   -right one char
+0
+    -home/begining of the line
+$
+    -end of the line
+^
+    -first non-blank char of line
+g
+    -last non-blank char of line
+e
+    -end of word
+b
+    -beginging of word
+--generally useful--
+i
+    -insert mode
+esc
+    -escape insert mode
+x
+    -delete char
+e
+    -refresh the file
+:d
+    -delete a line
+u
+    -undo
+:w
+    -write
+:q
+    -quite
+

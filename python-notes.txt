@@ -1,0 +1,26 @@
+import "file_name(w/o .py)"
+    -use to run a file
+source venv/bin/activate
+    -start the virtual env
+pip install sqlalchemy>=0.7.3
+    -install new things in venv
+pip freeze > requirements.txt
+    -requirments.txt now contains all the things installed on venv
+crtl + L
+    -clears the screen
+
+/Users/rgebhard/Projects/pytwilio.db/venv
+    -path to my python virtual enviornment
+
+in the root dir of the repo 
+    make install
+    make test
+    
+start the virtual env
+    venv/bin/python
+
+bring the current object into scope
+    from pytwilio.db.log.call import Call
+
+
+ 
