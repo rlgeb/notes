@@ -1,0 +1,116 @@
+==RECURSION SLIDES==
+
+*abstraction:
++hides uneccessay details
++reduces complexity
+Types:
+->procedural: functions
+  Properties:
+  	-Local: can be understood w/o looking at other code
+	-Substitutable: replace with about implimentation
+->data
+
+
+recursive functions:
+#1 what is the base case
+#2 how can this problem be broken down into smaller ones
+
+
+==TAIL RECURSION SLIDES==
+
+tail recursion: 
++no pending computation
++usually involves a helper function with an additional parameter to keep track of state
++requires constant stack space
++bascially same as iteration
+
+testing:
+testing-discovering something is broken
+debuging-fixing something that is broken
+
+types:
+1.incremental
++testing smaller easier to understand units	
++just wrote the code easier to fix
+
+==TESTING & FUNCTION POINTERS SLIDES==
+
+testing steps
+#1 understand the spec
+#2 id req behaviors
+#3 write specific tests
+#4 know the test ans
+#5 stress test
+
+test case classes
+->simple
+->boundry
+->nonsense
+
+regression testing: running tests to make sure new code didn't brake anything
+
+
+function pointer: pointer to executable code in memory
++useful if you want to make similar functoins such as max/min
+
+==RECURSION & ITERATION==
+recursive problem: defined in terms of itself
++one or more base case
++way to solve bigger problem by first solving a smaller problem
+
+
+
+*** ADD RECURSIVE STEP THROUGH EX ***
+
+==ARRAYS & POINTERS SLIDES==
+
+list: can grow as large as need be
+
+array: fixed size, homogeneous, indexed
+ex : int myarray[4] = { 1,2,4,5 }
+int myfunc(int myarray[], int my_array_size);
++passed by reference
+
+usage - cstring
+char a[] = "foo"
+a[0] = 'f'
+a[1] = 'o'
+a[2] = 'o'
+a[3] = '\0'
+
+pointers:address of an object
+ex:
+int foo;
+int *bar;
+bar = &foo;
+foo = 1;
++ dereference operator = * what is at the address stored
+
+
+==ARRAY TRAVERSAL SLIDES==
+pointer arithmatic:just move this pointer to the by the amount of the
+reference typpe 
+ex bar  + 1 would just move to the next int in memory
+
+some additional pointer notes:
+const T *p; //T the pointer to obj cannot be changed
+T *const p; //p the pointer cannont be changed
+const T *const p //neither can be changed
+
+==STRUCTS AND ENUMS SLIDES==
+struct: compound object
+
+struct myStuct{
+  int var1;
+  char abc;
+};
+
+const type name;
+once the value is initialized it is never allowed to change
+conts int would be a supertype of an int//this is backwards of what you would think
+
+enum Rank = { BEST, AVG, WORST }
+
+
+
+
