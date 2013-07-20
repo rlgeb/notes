@@ -38,12 +38,14 @@ types<br />
 
 ## TESTING & FUNCTION POINTERS (5)
 
+<pre>
 testing steps
 1. understand the spec
 2. id req behaviors
 3. write specific tests
 4. know the test ans
 5. stress test
+</pre>
 
 test case classes
 + simple
@@ -150,7 +152,7 @@ catch(type X){
 }
 `</code></pre>
 
-12. SKIP
+12 SKIP
 
 ## ABSTRACT DATA TYPES aka classes (13)
 talking about WHAT something does vs HOW it does something
@@ -216,9 +218,9 @@ syntax: `virtual void insert();`
 ***virtual base class/ abstact base class***:  interface only class from which implimentation can be dervied.
 
 syntax: 
-`
+
 `virtual bool query() = 0;`
-`
+
 this is a ***pure virtual function*** meaning that the subclass MUST impliment this method.  You cannot create any instances of this.  So you must create references and pointers to them.
 
 you derive a subclass from the abstract class and put the implimentation in it.  Note:  must include a constructor since the abc can not have one.
@@ -243,10 +245,12 @@ so now for a user to access AClass:
 3. representation-applies to the data members comprising an impl of an adt
 
 ## MEMORY MODLES (17)
+<pre>
 3 types of objects:
 1. global - space reserved at compile time
 2. local - space reserved at runtime
 3. dynamic - compilier does not need to know how big it will be or how long it will live
+</pre>
 
 syntax: 
 `int *ip = new int; //allocates space on the heap`
@@ -255,13 +259,14 @@ syntax:
 
 ***memory leak***- when you end up with dynamically allocated object that does not have anything pointing to it and can not be deleted.
 
-
+<pre>
 The address space:
 stack
 THE BIG VOID
 Heap
 Global 
 Text
+</pre>
 
 ## COPYING ARRAYS SLIDES (18)
 to delete arrays use:
@@ -273,10 +278,10 @@ to delete arrays use:
 syntax: `ClassName::~ClassName(){}`
 
 copy contructor: passing arguments by-value
-tasks:
-1. allocate an array of the same size as the source sets
-2. copy each element from the source to the new
-3. copy all the other members
+tasks:<br />
+1. allocate an array of the same size as the source sets<br />
+2. copy each element from the source to the new<br />
+3. copy all the other members<br />
 
 syntax:`AClass(const AClass &source);`
 
@@ -333,8 +338,7 @@ List<int> int_list;
 
 ***polymorphic container***-can hold more than one type at once
 
-
-1. need to create a base class with at least one virtual method. This will be our special container type and everything else will be a subtype of it.
+need to create a base class with at least one virtual method. This will be our special container type and everything else will be a subtype of it.
 but because this does not work both ways we must use dynamic_cast.
 `dynamic_cast<type>(value);`
 
