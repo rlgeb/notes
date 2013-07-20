@@ -219,7 +219,7 @@ syntax:
 `
 `virtual bool query() = 0;`
 `
-this is a ***pure virtual function***.  You cannot create any instances of this.  So you must create references and pointers to them.
+this is a ***pure virtual function*** meaning that the subclass MUST impliment this method.  You cannot create any instances of this.  So you must create references and pointers to them.
 
 you derive a subclass from the abstract class and put the implimentation in it.  Note:  must include a constructor since the abc can not have one.
 
@@ -294,12 +294,88 @@ AClass()::AClass(const AClass &source)
 
 }
 </code></pre>
-***assignment operator***-given a target and a source makes the target a copy of the source
+***assignment operator***-given a target and a source makes the target a copy of the source.  allows for chained assignment.  
 syntax: `AClass& operator= (const AClass& source)`
 
 -generally both of these methods call the same "copy" method
 
+## LINKED LISTS (20)
+
+***linked list***-a structure of zero or more container connected by ptrs
+
+## TEMPLATES (21)
+
+***double-ended linked list***-there are both first and last ptrs
+
+***doubly-linked list***-list has both next and previous ptrs
+
+-when you have really big objects pass them by reference, and create a list of ptrs to them.
+
+***Polymorphism***-literally many forms.  Re-using code for different types.There are 2 forms in C++: Templated containers and Polymorphic objects
+
+syntax:<br />
+<pre><code>
+//class definition
+template <class T>
+class List{
+  ...
+};
+
+//class implimentation
+void List<T>::someMethod{}
+
+//istansiation
+List<int> int_list;
+</code></pre>
 
 
+## POLYMORPHISM & BUGS (22)
+
+***polymorphic container***-can hold more than one type at once
+
+
+1. need to create a base class with at least one virtual method. This will be our special container type and everything else will be a subtype of it.
+but because this does not work both ways we must use dynamic_cast.
+`dynamic_cast<type>(value);`
+
+***named constructor idiom***-a method that copis the obj, returning a ptr to the generic base class.  this method is usually named clone and is a pure vitural function in the base class;
+
+# Iterators (23)
+
+***iterator***-provide an abstraction that can access each oject in the set. They are a seperate abstraction from the container becuase they may have a shorter lifetime and there also maybe more than one of them.  iterators have two main methods create and next.  
+
+***friend***-allows you to expose the private state of a class to another. It is something that is given not taken.  This declaration is really important for iterators to be able to access them details of the class they provide access to.
+
+syntax:
+
+<pre><code>
+class ListItr{
+  friend class List;
+  List *lp;
+  node *next;
+  bool valid;
+ public:
+  ListItr(List &l);
+  ~ListItr();
+  const Object *getNext();
+};
+
+class List{
+  friend class ListItr;
+  ListItr *i;
+  ...
+};
+</code></pre>
+
+# FUNCTORS (24)
+
+reason:  two similar functions has_even and has_odd why should we have two almost identical functions?  Functions are not first class in c++ so we can create function objects.
+
+We do this by overloading the () symbol in a class.  
+
+
+# CONCURENCY (25)
+
+running things in parallel.
 
 
