@@ -1,15 +1,16 @@
-1,2. SKIP
+(1,2. SKIP)
 
 ## RECURSION SLIDES (3)
 
-*abstraction:
-+hides uneccessay details
-+reduces complexity
+**abstraction**:
++  hides uneccessay details
++  reduces complexity
+
 Types:
 ->procedural: functions
   Properties:
-  	-Local: can be understood w/o looking at other code
-	-Substitutable: replace with about implimentation
+  	- Local: can be understood w/o looking at other code
+	- Substitutable: replace with about implimentation
 ->data
 
 
