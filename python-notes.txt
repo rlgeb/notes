@@ -1,3 +1,10 @@
+when starting a new python project 
+#1 create a new python virtual enviornment
+    virtualenv venv --develop
+     source venv/bin/activate
+#2 now install the project requirements
+
+
 import "file_name(w/o .py)"
     -use to run a file
 source venv/bin/activate
@@ -9,6 +16,9 @@ pip freeze > requirements.txt
 crtl + L
     -clears the screen
 
+/Users/rgebhard/Projects/pytwilio.db/venv
+    -path to my python virtual enviornment
+
 in the root dir of the repo 
     make install
     make test
@@ -17,7 +27,31 @@ start the virtual env
     venv/bin/python
 
 bring the current object into scope
-    from xxxx.db.log.call import Call
+    from pytwilio.db.log.call import Call
+
+flask
+    -python microframework
+
+__init.py__
+__init__.py files are required to make Python treat the directories as containing packages; 
+
+--testing-- 
+nosetest:
+how does it work?
+collects all of the tests that are subclasses of unittest.TestCase
+all of the methods of the class you would like to run must be prefixed with "test_" in the name
+
+it looks for things that appear to be tests using regx
+
+nosetests "filename1" 
+
+nosetests in the root directory will run all of the tests
+
+mock:
+-used to create fake objects for testing
+Mock():
+a flexible object that is intended to replace the stubs and test doubles in tests
 
 
- 
+flask: a microframework for creating web applications
+

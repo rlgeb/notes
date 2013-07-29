@@ -1,0 +1,8 @@
+svn up
+    -only updates the current dir and all of its sub directories with the current version
+
+svn stat
+    -the current status of the repo
+
+svn commit -m ""
+    -commit the changes made

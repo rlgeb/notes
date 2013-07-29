@@ -1,0 +1,27 @@
+--GOOGLE CLOSURES NOTES--
+1. JS COMPILER: OPTIMIZES CODE AND MAKES IT EASIER TO MAINTAIN 
+//MAKES A POST REQUEST TO THE API WITH THE TYPES OF OPTIMIZATIONS
+  THE COMPRESSED OPTIMIZED CODE WILL BE IN THE RESPONSE
+
+2. JS LIBRARY: DOM MANIPULATION, SERVER COMMUNICATION, DATA STRUCTURES, UNIT TESTING, RICH TEXT EDITING
+
+
+3. JS TEMPLATES: DYNAMICALLY GENERATION PAGES
+
+
+
+
+
+--COFFEE SCRIPT--
+1. does all of the lexical scoping for you. aka you do not need to use var
+2. cleaner and shorter syntax (sort of looks like python to me but takes from Ruby as well)
+3. don't have to worry about using keywords like class, it will take care of quoting them for you
+4. splats: used for defining/invoking functions with variable number of arguments
+5. array slicing and splicing
+6. classes become so much easier to deal with
+7. chained comparisons
+8. string interpolation from Ruby
+9. Block style strings
+
+
+
