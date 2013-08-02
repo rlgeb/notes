@@ -1,6 +1,33 @@
+daemon process
+    -
+
+
+
 COMMANDS
+scp file username@ip:location
+
+ps
+    -process status.  displays the currently running processes.  Give you PID, TTY, TIME, CMD
+ps aux
+    -gives you many more details
+
+USER = user owning the process
+PID = process ID of the process
+%CPU = It is the CPU time used divided by the time the process has been running.
+%MEM = ratio of the process’s resident set size to the physical memory on the machine
+VSZ = virtual memory usage of entire process
+RSS = resident set size, the non-swapped physical memory that a task has used
+TTY = controlling tty (terminal)
+STAT = multi-character process state
+START = starting time or date of the process
+TIME = cumulative CPU time
+COMMAND = command with all its arguments
+
+awk '{print $2}
+    -process files organized in rows and cols.  element of the 2nd col of each line
+
 grep "search_phrase" "search_doc"
-    -search
+    -search. stout is default if no serach path provided
 
 ls -l
     -tells you more about files such as privledges, size ect
