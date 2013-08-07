@@ -152,6 +152,7 @@ preformance
 
 ***tree***-nonempty collection of verticies/nodes and edges in which there exsists precisely one path connecting any 2 nodes.
 
++ can be implimented as an array(vector) or a linked structure
 + root: top most vertex in the tree
 + parent/child: direct links in the tree
 + internal node :  a node w/ children
@@ -181,3 +182,121 @@ void fixUp(Item heap[], int k){
   }
 }
 </code></pre>
+
+
+
+## TREES
+
+tree traversal:
+
++ preorder: visit node, left, right
++ inorder: left, node, right
++ postorder:left, right, node
+
+
+### Binary Search Trees
+
+***binary search tree***-a binary tree that has key associated w/ each of its internal nodes, with the added property that the key of any node is:
++ >= keys of all nodes of the left subtree
++ <= keys of all the nodes in the right subtree
+
++ inorder traversal sorts a bst
+
+methods:
+
++insert: easy average O(log N) worst  O(N) //depends on how balenced the tree is
++find: easy average O(log N) worst O(N)
+
++remove: need to use rotations
+
+### AVL Trees
+
+methods:
+
++seatch / insert O(log N) worst case
+
+Height Balence Property:
+
++every internal node v of T, the heights of the children of v differ by at most one.  inserting may require rotations
+
++four cases: 2 outside and 2 inside
+
+
+### Red Black Tree
+
++ less ridgedly balenced than AVL trees
++ faster to insert and remove slow to search
+
+## HASHING & DICTIONARIES
+
+***dictionary adt***-store items that support 2 basic operations insert a new item and return an item with a given key.
+
+***hashing***-reference items in a table by keys.  use arithmetic operations to transform keys into table addresses (buckets)
+
+M = Table Size
+
+need:
+
++ hash function: transforms the serach key into a a table address.
+1. hash code: t(key) -> intmap. maps the key to an integer
+2. compression map: c(intmap) -> address. maps the integer to the array size.
+
+key type = floats in a fixed range
+
++ key [0, 1] h(key) = floor(key * M)
++ key [s, t] h(key) = floor( ((key-s)/(t-s)) * M)
+
+key type == w-bit ints 
+
+h(key) = floor( key * 0.618033) % PRIME#
+
+key type == string
+FILL ME IN
+
++ collision resolution: dealing with search keys that hash to the same table address.
+
+methods:
+<pre>
+1. seperate chaining: scheme for collision resolution where we maintain M linked lists one for each table address
+2. linear probing: when a collision occurs check the next position in the table
+3. double hashing: apply the hash function again when a collision occurs
+</pre>
+
+## Graphs 
+
+***graph***-network showing relations between pairs of objects. A graph GG = (V,E) is a set of Vertices V ={v1,v2,...} together with a set of edges E = {e1,e2,...} that connect the pair of vertices.  Edges can be thought of a tuples of vertices; em = (vs, vt)
+
+***simple graph***-graphs w/o parllel edges and w/o self-loops.
+
+|E| = # of Edges<br />
+|V| = # of Vertices
+
+***directed graphs***-edges have direction (incomming or outgoing)
+***unordered graphs***-nodes on edges form unordered pairs
+
+representation:
+
+adjacency matrix: |V| x |V|
+adjacency list: array of ptrs ( 1/ vertex ) to list the edges 
+
+
++ dense graph: many edges (|E|~|V^2|), represent as an adjacency matrix
++ sparse graph: few edges ( |E|<<|V^2| ), represent as an adjacency list
+
++ simple path: sequence of edges leading from 1 vertex to another w/ no vertex appearing twice
++ cycle: like the simple path, but the first node = final node
+
++ connected graph: simple path exists btween any pair of vertices
++ connected component: subgraph that is connected
+
+O(V + E) w/ adj list
+O(V^2) w/ adj matrix
+
+### Algos
+
+***depth first search***-discovers a path from source s to goal g if one exsits. Uses a stack and is usually faster.
+
+***breadth first search***-discovers the shortest path from source to any goal.  Uses a queue.
+
+***minimal spanning tree***-    
+
