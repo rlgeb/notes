@@ -1,5 +1,3 @@
-COMMANDS 
-
 --general use--
 
 git clone "repo_url"
@@ -42,6 +40,8 @@ git commit --amend
 git push "remove_name" "branch_name"
     - empty push to trigger service hook
 
+git merge "branch_name"
+    -do a git checkout master and then merge and fix confilcts
 --tagging--
 marker for a version in git that cannont change use them to checkout or for creating branches
     git tag "name_of_tag"
