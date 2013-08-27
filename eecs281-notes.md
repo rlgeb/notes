@@ -298,5 +298,99 @@ O(V^2) w/ adj matrix
 
 ***breadth first search***-discovers the shortest path from source to any goal.  Uses a queue.
 
-***minimal spanning tree***-    
+***minimal spanning tree***-the tree T that contains all the nodes in grpah G & the sum of of the cost of the edges in T in minimal. 
+
+methods:
+
+***Prims Algorithm***: greedy algorithm for finding MST by adding node currently closest to tree.  
+steps:
+<pre>
+1. init 2 sets of verticies 'inies' & 'outies'
+2. 1st ini is a random node 
+3. choose outie w/ the smallest distance to any inie
+4. move that outie to the inies set. 
+
+data structure: martix of vert - visited - distance - parent
+
+</pre>
+
+***Kruskals Algorithm**- greedy algorithm for finding MST. selects edgess 1 at a time and addes them to a forest.
+steps:
+<pre>
+1. select the minimum edge not already added
+2. make sure it does not cause any cycles
+3. repeat until done
+</pre>
+
+
+***Dijkstras Algorithm***- greedy single source shortest path algorithm.  Given a weighted gprah and 2 verticeies find the shortest path between them
+
+data structure- matrix of vert - is the shortest path from start to vert known? - what is the length of the shortest path - what is the parent of v on that path.
+
+all pairs shortest path.  Run Dijkstra on each verticie in the set.
+
+***Floyds Algorithm***-All source shortest path.  Dynamic programming method for solving all-pairs shortest path.  Always better on a dense graph. may be better on a sparse graph.
+
+data structure- adjacency matrix VxV(from x to).  should be mirrored down the middle
+
+O(V^3) best, worst, average
+vk is a set of verticies
+steps:
+<pre>
+1. init distaces to the edges
+2. add verticies to vk one at a time 
+3. foreach new vertex, consider whether it improves each possible path
+</pre>
+
+***Dynamic Programming***-eliminate costly re-computation in any recursive algorithm.  cost is space.
+
+Example: fibonacci sequence
+
+Example: A thief robbing a safe finds it with N items of varrious size and value.  The thief has a knapsack of capacity M.  Find the max value the thief can pack into his knapsack.
+
+brute force: O(N2^N)
+1. gernerate posible solution space
+2. filter possible subsets
+3. determine optimal solution
+
+greedy: O(NlgN)
+
+1. sort items by ration of value to size
+2. choose highest ratio first
+
+DP: 
+
+
+### Algorithm Families
+
+1. Brute Force: Solve a problem in the most simple, direct, or obvious way
+2. Greedy: makes sequence of decisions, and never reconsiders already made decisions.  always chooses the local optimum.  
+ 3. Divide & Conquer: divide the problem into two or more smaller subproblems, preferable of equal size.
+4. Dynamic Programming: Remebers partial soultions when smaller instances are related. Solves small instances first, stores them and then looks them up.
+
+Example: Counting Change - return the specified sum using the smallest number of coins.
+Greedy approach is much faster however it does not always return the optimal solution.
+
+***backtracking***-Consider all possible outcomes of each decision, but prune searches that do not satisfy constraints.
+
+Example: N Queens
+
+***branch & bound***-same idea as backtracking but extended to optimization problems.  partial solutions are pruned if its cost is >= the current best solution.
+
+
+### Text Compression
+
+***huffman encoding***-encode text str Y based upon frquency of each char.
+
+steps:
+<pre>
+1. determine the frequency of each char
+2. create extrernal nodes for each char. the nodes contain the char and its frequency.
+3. interatively, until only one tree remaining.
+  - conbine twilio trees w/ smallest frequencies
+  - set frequency of the new node = frequency of left + right
+4. determine code by following path
+  -leftchild = 0
+  -rightchild = 1
+
 
