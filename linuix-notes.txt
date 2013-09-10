@@ -1,10 +1,29 @@
-daemon process
-    -
-
-
 
 COMMANDS
-scp file username@ip:location
+scp file username@ip:location.filename
+
+man ascii
+-This prints out the ascii tables in octal, hexadeciamal and decimal. I can’t believe I didn’t know about this one until a month ago. I’d always resorted to googling for the tables. This is much more convenient.
+
+cal
+-pulls up a calendar
+
+xxd
+-can generate a hex dump of a given file, and also convert an edited hex dump back into its original binary form. It can also output the hex dump as a C array which is also super handy
+xxd -i data.bin
+-compare binary files by generating a hex dump of two files and then diff’ing them.
+
+ssh
+-logging into remote machines
+
+-X-forwarding – connect to a remote machine and have any gui applications started, displayed as if they were started locally, even if the remote machine doesn’t have an X server.
+-Port forwarding – forward a connection to a local port to a port on a remote machine OR forward connections to a port on a remote machine to a local port
+-SOCKS proxy – allows you forward any connections of an application that supports SOCKS proxies through the remote host. Useful for more secure browsing over public wifi and for getting around overly restrictive firewalls.
+-typing a password on your local machine once, then using a secure identity to login to several remote machines without having to retype your password by using an ssh key agent. This is awesome.
+
+mdfind -name serach_term
+-This one is specific to mac, as there are other *nix equivalents. It has similar functionality to find but uses the Spotlight index. It allows you to search your entire filesystem in seconds.
+
 
 ps
     -process status.  displays the currently running processes.  Give you PID, TTY, TIME, CMD
