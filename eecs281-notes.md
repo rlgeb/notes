@@ -97,7 +97,41 @@ T(0) = T(1) = 0; T(N) = 1 + 2T(N/2)
 ## SORTING ALGOS
 
 ### Bubble sort
--simple sort
+visual http://en.wikipedia.org/wiki/File:Bubble-sort-example-300px.gif
+c++ implimentation
+<code>
+void bubbleSort(DynamicArray& A) {
+  
+  for (int i=ONE;i<A[0].keyValue; i++){
+    for (int j=A[0].keyValue;j>i;j--){
+      if(A[j].keyValue<A[j-ONE].keyValue){
+    Site temp;
+    temp=A[j];
+    A[j]=A[j-ONE];
+    A[j-ONE]=temp;
+      } 
+      //tie use url
+      else if(A[j].keyValue == A[j-ONE].keyValue && A[j].url<A[j-ONE].url){
+        Site temp;
+    temp=A[j];
+    A[j]=A[j-ONE];
+    A[j-ONE]=temp;
+      }
+    }
+  }
+  
+  return;
+}
+</code>
+
+Run Time:
+Best  O(n)
+Avg   O(n^2)
+Worst O(n^2)
+
+Memory 1
+Stable
+
 ### Selection sort 
 -simple sort
 

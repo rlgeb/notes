@@ -1,0 +1,16 @@
+Sharding - horizontal partition in a db. Rows of a db are held elsewhere.
+
+MapReduce - program for processing large amounts of data sets in parallel.  Introduced with the idea/example of building a search engine.
+
+1. Map():
+   takes the input key/value and outputs key/value
+in the example of word count input would be the file of words output would be word/count
+2. Reduce():
+iterate through values that are associated with a key and produce zero or more output.  In the example of word count you would sum all the different counts for a word.
+
+Hadoop is a commonly used MR framework. We used it for our wikipedia serach project.
+
+
+
+
+ 
