@@ -96,33 +96,20 @@ T(0) = T(1) = 0; T(N) = 1 + 2T(N/2)
 
 ## SORTING ALGOS
 
+### Insert Sort
+-visual http://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif
+-desc : like sorting cards in you hand.  start on the left place cards (one at a time moving right) in the correct spot to the left of the first inital left card.
+
++ best O(n)
++ avg O(n^2)
++ worst O(n^2)
+
++ space 1
++ stable
+
 ### Bubble sort
-visual http://en.wikipedia.org/wiki/File:Bubble-sort-example-300px.gif
-c++ implimentation
-<code>
-void bubbleSort(DynamicArray& A) {
-  
-  for (int i=ONE;i<A[0].keyValue; i++){
-    for (int j=A[0].keyValue;j>i;j--){
-      if(A[j].keyValue<A[j-ONE].keyValue){
-    Site temp;
-    temp=A[j];
-    A[j]=A[j-ONE];
-    A[j-ONE]=temp;
-      } 
-      //tie use url
-      else if(A[j].keyValue == A[j-ONE].keyValue && A[j].url<A[j-ONE].url){
-        Site temp;
-    temp=A[j];
-    A[j]=A[j-ONE];
-    A[j-ONE]=temp;
-      }
-    }
-  }
-  
-  return;
-}
-</code>
+- visual http://en.wikipedia.org/wiki/File:Bubble-sort-example-300px.gif
+- idea: compare two elements (0,1) if they are out of order switch them. Compare the next two (1,2) if the are out of order switch them... and so on.  Only can stop after one full pass without any swaps.
 
 Run Time:
 Best  O(n)
@@ -130,12 +117,13 @@ Avg   O(n^2)
 Worst O(n^2)
 
 Memory 1
+
 Stable
 
-### Selection sort 
--simple sort
+###Quick Sort
 
-###Quick sort
+- pick a pivot and sort each side such that the pivot is in the correct spot. continue with both sides of the pivot.
+- visual : http://upload.wikimedia.org/wikipedia/commons/9/9c/Quicksort-example.gif
 -divide and conquer
 + easy to impliment
 + works well with a variety of input data
@@ -143,8 +131,6 @@ Stable
 + ideal partition is the median.  the pivot choice greatly effects preformance. sampling to choose partition can greatly improve performance.
 base case: arrays of len 0 or 1 are trivially sorted.  <br />
 inductive step: select a partition element.  form 2 arrays lhs and rhs where lhs <= elt and rhs>=elt.  recursively sort lhs and rhs.
-
-
 
 <pre><code>
 Partition(A, left, right)
@@ -173,13 +159,35 @@ preformance
 + average case O(N log N)
 + best case O(N log N)
 
++ memory average O(log n)
++ memory worst O(n)
++ typically not stable
 
-###Merge sort
+###Merge Sort
+ -desc : split the array in half over and over until you have arrays of len one.  Then buid back the arrays sorting them.
+- visual: http://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif 
+
+
 -divide and conquer
++ worst case: O(n log n)
++ average case: O(n log n)
++ best case: O(n log n)
+
++ memory worst case O(n)
++ stable
 
 ###Heap sort
--divide and conqure
+- visual: http://upload.wikimedia.org/wikipedia/commons/4/4d/Heapsort-example.gif
+- desc: build a binary tree out of array.  remove items from heap in order of size maintaining the heap property of parents being >= child
+- divide and conqure
 
+
++ best O(n lg n)
++ average O(n lg n)
++ worst O(n lg n)
+
++ memory 1
++ stable NO
 
 
 ## TREES, PRIORITY QUEUES, & HEAPS
