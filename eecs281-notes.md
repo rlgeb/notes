@@ -97,98 +97,69 @@ T(0) = T(1) = 0; T(N) = 1 + 2T(N/2)
 ## SORTING ALGOS
 
 ### Insert Sort
--visual http://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif
--desc : like sorting cards in you hand.  start on the left place cards (one at a time moving right) in the correct spot to the left of the first inital left card.
-
-+ best O(n)
-+ avg O(n^2)
-+ worst O(n^2)
-
-+ space 1
-+ stable
++ visual http://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif
++ desc : like sorting cards in you hand.  start on the left place cards (one at a time moving right) in the correct spot to the left of the first inital left card.
+<pre>
+best  O(n)
+avg   O(n^2)
+worst O(n^2)
+memory 1
+stable yes
+</pre>
 
 ### Bubble sort
-- visual http://en.wikipedia.org/wiki/File:Bubble-sort-example-300px.gif
-- idea: compare two elements (0,1) if they are out of order switch them. Compare the next two (1,2) if the are out of order switch them... and so on.  Only can stop after one full pass without any swaps.
-
-Run Time:
-Best  O(n)
-Avg   O(n^2)
-Worst O(n^2)
-
-Memory 1
-
-Stable
++ visual http://en.wikipedia.org/wiki/File:Bubble-sort-example-300px.gif
++ idea: compare two elements (0,1) if they are out of order switch them. Compare the next two (1,2) if the are out of order switch them... and so on.  Only can stop after one full pass without any swaps.
+<pre>
+best  O(n)
+avg   O(n^2)
+worst O(n^2)
+memory 1
+stable yes
+</pre>
 
 ###Quick Sort
-
-- pick a pivot and sort each side such that the pivot is in the correct spot. continue with both sides of the pivot.
-- visual : http://upload.wikimedia.org/wikipedia/commons/9/9c/Quicksort-example.gif
--divide and conquer
++ pick a pivot and sort each side such that the pivot is in the correct spot. continue with both sides of the pivot.
++ visual : http://upload.wikimedia.org/wikipedia/commons/9/9c/Quicksort-example.gif
++ divide and conquer
 + easy to impliment
 + works well with a variety of input data
 + consumes little memory
 + ideal partition is the median.  the pivot choice greatly effects preformance. sampling to choose partition can greatly improve performance.
 base case: arrays of len 0 or 1 are trivially sorted.  <br />
 inductive step: select a partition element.  form 2 arrays lhs and rhs where lhs <= elt and rhs>=elt.  recursively sort lhs and rhs.
-
-<pre><code>
-Partition(A, left, right)
-  pivotval = A[right]
-  i = left -1
-  for j=left to right-1
-    if A[j] <= pivotval:
-      i = i+1
-      swap(A[i], A[j])
-  swap(A[i+1], A[right])
-  return i+1
-
-QuickSort(A, left, right)
-  //input: array A and ints left and right
-  //output: sorted array A
-  if left < right
-    pivot = Partition(A, left, right)
-    Quicksort(A, left, pivot-1)
-    Quicksort(A, pivot+1, right)
-
-
-</code></pre>
-
-preformance
-+ worst case: O(N^2)
-+ average case O(N log N)
-+ best case O(N log N)
-
-+ memory average O(log n)
-+ memory worst O(n)
-+ typically not stable
+<pre>
+best  O(N log N)
+avg   O(N log N)
+worst O(N^2)
+memory average O(log n)
+memory worst O(n)
+stable not usually
+</pre>
 
 ###Merge Sort
- -desc : split the array in half over and over until you have arrays of len one.  Then buid back the arrays sorting them.
-- visual: http://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif 
-
-
--divide and conquer
-+ worst case: O(n log n)
-+ average case: O(n log n)
-+ best case: O(n log n)
-
-+ memory worst case O(n)
-+ stable
++ desc : split the array in half over and over until you have arrays of len one.  Then buid back the arrays sorting them.
++ visual: http://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif 
++ divide and conquer
+<pre>
+best  O(n log n)
+avg   O(n log n)
+worst O(n log n)
+memory worst case O(n)
+stable yes
+</pre>
 
 ###Heap sort
-- visual: http://upload.wikimedia.org/wikipedia/commons/4/4d/Heapsort-example.gif
-- desc: build a binary tree out of array.  remove items from heap in order of size maintaining the heap property of parents being >= child
-- divide and conqure
-
-
-+ best O(n lg n)
-+ average O(n lg n)
-+ worst O(n lg n)
-
-+ memory 1
-+ stable NO
-
++ visual: http://upload.wikimedia.org/wikipedia/commons/4/4d/Heapsort-example.gif
++ desc: build a binary tree out of array.  remove items from heap in order of size maintaining the heap property of parents being >= child
++ divide and conqure
+<pre>
+best  O(n lg n)
+avg   O(n lg n)
+worst O(n lg n)
+memory 1
+stable NO
+</pre>
 
 ## TREES, PRIORITY QUEUES, & HEAPS
 
@@ -214,18 +185,6 @@ preformance
 + a heap is a set of nodes w/ keys arranged in a complete heap-ordered binary tree, represented as an array.
 + parent of node i = floor(i/2)
 + children of i = 2i and 2i+1
-
-bottom up heapify
-<pre><code>
-void fixUp(Item heap[], int k){
-  while(k>1 && heap[k/2]<heap[k]{
-    exch(heap[k], heap[k/2]);
-    k = k/2;
-  }
-}
-</code></pre>
-
-
 
 ## TREES
 
