@@ -315,7 +315,7 @@ data structure: martix of vert - visited - distance - parent
 
 </pre>
 
-***Kruskals Algorithm**- greedy algorithm for finding MST. selects edgess 1 at a time and addes them to a forest.
+***Kruskals Algorithm***- greedy algorithm for finding MST. selects edgess 1 at a time and addes them to a forest.
 steps:
 <pre>
 1. select the minimum edge not already added
