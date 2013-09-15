@@ -4,7 +4,7 @@
  
 Approach:
 <pre>
-1,Define problem
+1. Define problem
 2. manage/understand complexity
 3. break into smaller subtasks
 4. refine solution based on expected usage
@@ -56,20 +56,20 @@ you ca build these either list or array  based.
 
 ***stack***-special type of list.  last-in, first out. (LIFO)
 
--we built this list based in 281.   
++ we built this list based in 281.   
 
 ***queue***-special type of list.  first-in, first-out.  (FIFO)
 
--we built this array based in 281.
++ we built this array based in 281.
 
 ## RECURSIVE PROBLEM SOLVING
 if you are given a tree problem then you should be solving it with rucursion
 
 ***recursion***-a problem that calls itself.  Use recursive relation to analyse performance.
 
--must have a termination condition
++ must have a termination condition
 
--each recrsive call must be on a smaller problem
++ each recrsive call must be on a smaller problem
 
 two types of recursion:
 
@@ -97,8 +97,8 @@ T(0) = T(1) = 0; T(N) = 1 + 2T(N/2)
 ## SORTING ALGOS
 
 ### Insert Sort
-+ visual http://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif
-+ desc : like sorting cards in you hand.  start on the left place cards (one at a time moving right) in the correct spot to the left of the first inital left card.
++ visual: http://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif
++ desc:   like sorting cards in you hand.  start on the left place cards (one at a time moving right) in the correct spot to the left of the first inital left card.
 <pre>
 best  O(n)
 avg   O(n^2)
@@ -108,8 +108,8 @@ stable yes
 </pre>
 
 ### Bubble sort
-+ visual http://en.wikipedia.org/wiki/File:Bubble-sort-example-300px.gif
-+ idea: compare two elements (0,1) if they are out of order switch them. Compare the next two (1,2) if the are out of order switch them... and so on.  Only can stop after one full pass without any swaps.
++ visual: http://en.wikipedia.org/wiki/File:Bubble-sort-example-300px.gif
++ desc:   compare two elements (0,1) if they are out of order switch them. Compare the next two (1,2) if the are out of order switch them... and so on.  Only can stop after one full pass without any swaps.
 <pre>
 best  O(n)
 avg   O(n^2)
@@ -119,8 +119,9 @@ stable yes
 </pre>
 
 ###Quick Sort
-+ pick a pivot and sort each side such that the pivot is in the correct spot. continue with both sides of the pivot.
 + visual : http://upload.wikimedia.org/wikipedia/commons/9/9c/Quicksort-example.gif
++ desc:    pick a pivot and sort each side such that the pivot is in the correct spot. continue with both sides of the pivot.
+
 + divide and conquer
 + easy to impliment
 + works well with a variety of input data
@@ -138,8 +139,8 @@ stable not usually
 </pre>
 
 ###Merge Sort
-+ desc : split the array in half over and over until you have arrays of len one.  Then buid back the arrays sorting them.
 + visual: http://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif 
++ desc : split the array in half over and over until you have arrays of len one.  Then buid back the arrays sorting them.
 + divide and conquer
 <pre>
 best  O(n log n)
@@ -205,22 +206,21 @@ tree traversal:
 
 methods:
 
-+insert: easy average O(log N) worst  O(N) //depends on how balenced the tree is
-+find: easy average O(log N) worst O(N)
-
-+remove: need to use rotations
++ insert: easy average O(log N) worst  O(N) //depends on how balenced the tree is
++ find: easy average O(log N) worst O(N)
++ remove: need to use rotations
 
 ### AVL Trees
 
 methods:
 
-+seatch / insert O(log N) worst case
++ seatch / insert O(log N) worst case
 
 Height Balence Property:
 
-+every internal node v of T, the heights of the children of v differ by at most one.  inserting may require rotations
++ every internal node v of T, the heights of the children of v differ by at most one.  inserting may require rotations
 
-+four cases: 2 outside and 2 inside
++ four cases: 2 outside and 2 inside
 
 
 ### Red Black Tree
@@ -366,7 +366,7 @@ DP:
 
 1. Brute Force: Solve a problem in the most simple, direct, or obvious way
 2. Greedy: makes sequence of decisions, and never reconsiders already made decisions.  always chooses the local optimum.  
- 3. Divide & Conquer: divide the problem into two or more smaller subproblems, preferable of equal size.
+3. Divide & Conquer: divide the problem into two or more smaller subproblems, preferable of equal size.
 4. Dynamic Programming: Remebers partial soultions when smaller instances are related. Solves small instances first, stores them and then looks them up.
 
 Example: Counting Change - return the specified sum using the smallest number of coins.
