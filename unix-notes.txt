@@ -91,4 +91,6 @@ cd
 ls
     -list contents
 
+screen -x 
+    -share terminal screen while sshed into a box
 
