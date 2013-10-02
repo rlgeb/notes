@@ -68,47 +68,53 @@ test case classes
 
 ***list***-data structure that can grow as large as need be
 
-***array***-data structure that is fixed size, homogeneous, indexed.  Passed by reference.<br />
-syntax:<br />
-<pre><code>
-int myarray[4] = { 1,2,4,5 };
-int myfunc(int myarray[], int my_array_size);
-</code></pre>
+***array***-data structure that is fixed size, homogeneous, indexed.  Passed by reference.
+
+
 cstring example:<br />
-<pre><code>
-char a[] = "foo"`
+
+<pre>
+char a[] = "foo"
 a[0] = 'f'
 a[1] = 'o'
 a[2] = 'o'
 a[3] = '\0'
-</code></pre>
+</pre>
 
-***pointers***-address of an object. Dereference operator is * what is at the address store.<br />
+***pointers***-address of an object. Dereference operator is * what is at the address store.
+
 syntax:<br />
-<pre><code>int foo;
+<pre>
+int foo;
 int *bar;
 bar = &foo;
 foo = 1;
-</code></pre>
+</pre>
 
 ## ARRAY TRAVERSAL (7)
+
 ***pointer arithmatic***-just move this pointer to the by the amount of the reference type. <br /> 
 syntax:<br />
-<pre><code>bar  + 1 //would just move to the next int in memory</code></pre>
+<pre>
+bar  + 1 //would just move to the next int in memory
+</pre>
 
 some additional pointer notes:
 
-<pre><code>const T *p; //T the pointer to obj cannot be changed
+<pre>
+const T *p; //T the pointer to obj cannot be changed
 T *const p; //p the pointer cannont be changed
-const T *const p //neither can be changed</code></pre>
+const T *const p //neither can be changed
+</pre>
 
 ## STRUCTS AND ENUMS (9)
 struct: compound object
-<pre><code>
+<pre>
 struct myStuct{
   int var1;
   char abc;
-};</code></pre>
+};
+</pre>
 
 <pre><code>const type name;
 once the value is initialized it is never allowed to change
@@ -124,25 +130,30 @@ INPUT & OUTPUT  (10)
 
 int main(int argc, char* argv[]) is the type signature of the main program
 
+
 1. compile
-`g++ programm.cpp -o a.out`
+<pre>`g++ programm.cpp -o a.out`</pre>
 2. run
-`./a.out 2 3 4`
+<pre>`./a.out 2 3 4`</pre>
 
 or 
-<pre><code>./a.out >inputfile
-./aout < outputfile/code></pre>
+
+./a.out > inputfile<br />
+./aout < outputfile/ 
+
 
 cin >>
 cout <<
 
 ***template***-remember that they suck for trying to debug sometimes
-syntax:<br /><pre><code>
+syntax:<br />
+<pre>
 template <typename T>
-T sum(T a[], int size)</code></pre>
+T sum(T a[], int size)
+</pre>
 
-EXCEPTIONS (11)
-<pre><code>
+## EXCEPTIONS (11)
+<pre>
 try{
   if(...) throw x;
 
@@ -150,11 +161,11 @@ try{
 catch(type X){
 
 }
-`</code></pre>
+</pre>
 
-12 SKIP
 
-## ABSTRACT DATA TYPES aka classes (13)
+## ABSTRACT DATA TYPES (13)
+
 talking about WHAT something does vs HOW it does something
 
 ***Abstract Data Tupe (ADT)***-description of values and operations
@@ -163,7 +174,7 @@ talking about WHAT something does vs HOW it does something
 + ABSTRACTION: both local and substitutable
 
 syntax:<br />
-<pre><code>
+<pre>
 class Myclass{
 	//OVERVIEW:
 
@@ -176,7 +187,8 @@ class Myclass{
 
 };
 `
-</code></pre>
+
+</pre>
 private: defualt of all the classes.  accessible only within the class and its members
 
 public: accessible everywhere, within and outside the class scope
@@ -186,7 +198,7 @@ protected: accessible within the class and its methods and descendants
 Constructor:call when you istantiate a new object of this type
 syntax
 
-`ClassName::ClassName(){}`
+<pre>`ClassName::ClassName(){}`</pre>
 
 
 ## ADT EFFICENCY & SUBTYPES (14)
@@ -201,16 +213,16 @@ syntax
 3. add one or more operations
 
 syntax:
-<pre><code>
+<pre>
 class MaxIntSet : public IntSet{
 	public:
 		int max();
 };
 `
-</code></pre>
+</pre>
 ***virtual functions***-virtual keyword tells c++ to choose at runtime which version of a member to use.  It maybe overridden by a subclass.  The compilier creates a virtual table for each virtual function inited to the appropriate implimentation.
 
-syntax: `virtual void insert();`
+syntax: <pre>`virtual void insert();`</pre>
 
 
 ## INERFACES & INVARIANTS (16)
