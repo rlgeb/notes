@@ -26,8 +26,8 @@ in the root dir of the repo
 start the virtual env
     venv/bin/python
 
-bring the current object into scope
-    from pytwilio.db.log.call import Call
+bring the current objetct into scope
+    from xxxx.db.log.call import Call
 
 flask
     -python microframework
