@@ -1,8 +1,19 @@
 
 COMMANDS
+
+aplay *.wav 
+
+-plays a wav sound file
+
+
+
+whoami
+-tell you what user you are running commands as
+
 scp file username@ip:location.filename
 
 man ascii
+
 -This prints out the ascii tables in octal, hexadeciamal and decimal. I can’t believe I didn’t know about this one until a month ago. I’d always resorted to googling for the tables. This is much more convenient.
 
 cal
