@@ -71,7 +71,8 @@ git push "remote_name" "branch_name"
     -f : push forcefully.  use if cloud and local get out of
     sync, like if you use --ammend on a commit.
 
-
+git fetch "remote_name"
+    -goes out and get all the new branches for the remote
 
 
 
