@@ -33,6 +33,12 @@ git stash
 git stash pop
     -restores all of the changes that you made
 
+git stash list
+    -shows all of your stashes 
+
+git stash drop
+    - drops the last stash you made
+
 --tricks--
 git commit --amend
   - blank commit
