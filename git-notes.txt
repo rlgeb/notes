@@ -48,6 +48,16 @@ git push "remove_name" "branch_name"
 
 git merge "branch_name"
     -do a git checkout master and then merge and fix confilcts
+
+git branch -D "branch_name"
+    -delete a branch locally
+
+git push :branch_name 
+    -delete a remote branch
+
+git cherry-pick "commit_hash"
+    -pull commits from a different branch into the one you are on.
+
 --tagging--
 marker for a version in git that cannont change use them to checkout or for creating branches
     git tag "name_of_tag"
