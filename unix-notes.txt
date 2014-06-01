@@ -5,12 +5,20 @@ aplay *.wav
 
 -plays a wav sound file
 
-
+ifconfig
+will show your ip address + more
 
 whoami
 -tell you what user you are running commands as
 
 scp file username@ip:location.filename
+
+nmap
+
+tool for telling with ports are open on an ip
+
+hydra
+tool we used for ssh brute force cracking 
 
 man ascii
 
