@@ -54,3 +54,8 @@ u
 :q
     -quite
 
+yy
+    -copy a line
+
+p 
+    -paste line

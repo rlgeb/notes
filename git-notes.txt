@@ -33,6 +33,12 @@ git stash
 git stash pop
     -restores all of the changes that you made
 
+git stash list
+    -shows all of your stashes 
+
+git stash drop
+    - drops the last stash you made
+
 --tricks--
 git commit --amend
   - blank commit
@@ -42,6 +48,16 @@ git push "remove_name" "branch_name"
 
 git merge "branch_name"
     -do a git checkout master and then merge and fix confilcts
+
+git branch -D "branch_name"
+    -delete a branch locally
+
+git push :branch_name 
+    -delete a remote branch
+
+git cherry-pick "commit_hash"
+    -pull commits from a different branch into the one you are on.
+
 --tagging--
 marker for a version in git that cannont change use them to checkout or for creating branches
     git tag "name_of_tag"
@@ -71,7 +87,8 @@ git push "remote_name" "branch_name"
     -f : push forcefully.  use if cloud and local get out of
     sync, like if you use --ammend on a commit.
 
-
+git fetch "remote_name"
+    -goes out and get all the new branches for the remote
 
 
 

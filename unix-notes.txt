@@ -113,3 +113,5 @@ ls
 screen -x 
     -share terminal screen while sshed into a box
 
+php -a
+    -interactive php in the terminal
