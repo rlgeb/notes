@@ -22,6 +22,10 @@ Example: Starbucks cost calculation system for there beverages and all the optio
 
 Example: Pizza shop ordering different types of pizza from different franchises.
 
+## Command Pattern: Encapsulating Invocation
+def:
+The Command PAttern encapsulates a request as an object thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable operations.
+
 # OO Principles
 
 + Encapsulate what varies 
