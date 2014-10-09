@@ -1,30 +1,31 @@
 # Design Patterns & Idioms
 
-
-## Strategy  
-
-The strategy patter defines a family of algorithms, ecapsultes each one, and makes them interchangeable.  Strategy let the algorithm vary independently from clients that use it.
-
 ## Observer Pattern
 
-the Observer patten defines a one-to many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically.
+Defines a one-to many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically.
 
 Example: bulding a station display for diffenet weather measurements.
 
+Notes:
++ One of the most commonly used patterns in the JDK
+
 ## Decorator Pattern
 
-Attach additional responsibilities to an object dynamically.  Decorators provide a flexible alternative to subclassing for extending functionality.
+Attaches additional responsibilities to an object dynamically.  Decorators provide a flexible alternative to subclassing for extending functionality.
 
 Example: Starbucks cost calculation system for there beverages and all the options for them.
 
 ## The Factory Idiom
 
+Defines an interface for creating an object, but lets subclasses decide which class to instantiate.  Factor method lets a class defer instantiation to subclasses.
 
 Example: Pizza shop ordering different types of pizza from different franchises.
 
 ## Command Pattern: Encapsulating Invocation
-def:
-The Command PAttern encapsulates a request as an object thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable operations.
+
+Encapsulates a request as an object thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable operations.
+
+Example: A remote controll with on/off/undo that needs to be designed to work with multiple appliances in a house.
 
 # OO Principles
 
