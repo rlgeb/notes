@@ -31,6 +31,8 @@ Encapsulates a request as an object thereby letting you parameterize other objec
 
 Example: A remote controll with on/off/undo that needs to be designed to work with multiple appliances in a house.
 
+Notes:
++ [An example implimentation of mine](https://github.com/rlgeb/misc-code/tree/master/c%2B%2B/design-patterns/command-pattern)
 
 # OO Principles
 
