@@ -10,6 +10,9 @@ git commit
 git log
     -displays the commit history
 
+gitk
+    - tool for deeper log dive
+
 git status
     -changes to be commited, shows chnages not staged for commit, untracked files
 
