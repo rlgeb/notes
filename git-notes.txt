@@ -62,9 +62,19 @@ git cherry-pick "commit_hash"
     -pull commits from a different branch into the one you are on.
 
 --tagging--
-marker for a version in git that cannont change use them to checkout or for creating branches
-    git tag "name_of_tag"
+marker (ptr) for a version in git that cannont change use them to checkout or for creating branches
 
+git tag
+    -list all tags
+
+git tag -a "name_of_tag" -m "message"
+    -create annotated tag, no -a will create a lightweight tag, -s creates a signed tag
+
+git show "tag_name"
+    -see tag and commit data
+
+git push "remote_name" "tag_name"
+    -you have to push tags if you want to share them
 
 
 --forking--
@@ -92,7 +102,5 @@ git push "remote_name" "branch_name"
 
 git fetch "remote_name"
     -goes out and get all the new branches for the remote
-
-
 
 
