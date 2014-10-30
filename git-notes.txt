@@ -9,7 +9,12 @@ git commit
 
 git log
     -displays the commit history
-
+    --not other_branch_name show commits not in branch
+    - double dot syntax: can do git log branch1..branch2 to see which commits are in branch1 and not branch2
+    note: this is the same as git log branch2 --not branch1
+    - triple dot: git log branch1...branch2 all references reachable by either branch but not both. --left-right
+    will show you which side the commit is in.
+ 
 gitk
     - tool for deeper log dive
 
@@ -18,7 +23,9 @@ git status
 
 git add "file_name"
     -addes the file_name to the changes to be commited section
-
+    -use -i option to add interatively.
+    -user -p option for patch to stage parts of files
+    
 git checkout "file_name"
     -checkouts out the file_name from the master
     -can use this to revert to the last commited version of a file
@@ -42,9 +49,9 @@ git stash list
 git stash drop
     - drops the last stash you made
 
---tricks--
 git commit --amend
-  - blank commit
+  - drops you into a text editor to change your commit message.
+
 
 git push "remove_name" "branch_name"
     - empty push to trigger service hook
@@ -52,6 +59,14 @@ git push "remove_name" "branch_name"
 git merge "branch_name"
     -do a git checkout master and then merge and fix confilcts
 
+git rebase "branch_name"
+    -apply commited changes on 1 branch & replay them on another 1. Do not 
+    rebase commits that you have pushed to a public repo!!
+    -i HEAD~# for interactive mode here as well, which lets you stop after each commit 
+    you want to modify and change the message, add files or whatever else. Note that this
+    will rewirte every commit the the # range even if you don't change anything. you will run git rebase --continue 
+    to move to the next commit and git commit --amend to change things
+    -squash: combines commits
 git branch -D "branch_name"
     -delete a branch locally
 
@@ -103,4 +118,18 @@ git push "remote_name" "branch_name"
 git fetch "remote_name"
     -goes out and get all the new branches for the remote
 
+
+misc 
+
+git reflog
+    -log kept by git of where your HEAD and references have been for the last few months
+
+HEAD^ & HEAD~ 
+    -both mean first parent.  you can also chain them like HEAD^^^ or HEAD~3.
+
+git filter-branch
+    -use to rewrite large amounts of history
+
+git blame -L "line-range"
+    -show annotations
 
