@@ -118,9 +118,6 @@ git push "remote_name" "branch_name"
 git fetch "remote_name"
     -goes out and get all the new branches for the remote
 
-
-misc 
-
 git reflog
     -log kept by git of where your HEAD and references have been for the last few months
 
@@ -132,4 +129,3 @@ git filter-branch
 
 git blame -L "line-range"
     -show annotations
-
