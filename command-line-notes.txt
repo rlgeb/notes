@@ -113,5 +113,11 @@ ls
 screen -x 
     -share terminal screen while sshed into a box
 
-php -a
+php 
+-a
     -interactive php in the terminal
+-i 
+    -php info    
+
+top
+    -displays processor activity
