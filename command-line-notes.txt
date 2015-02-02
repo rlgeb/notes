@@ -112,12 +112,16 @@ ls
 
 screen -x 
     -share terminal screen while sshed into a box
-
+    -S screen_session_name
+    -L log output to a file
 php 
 -a
     -interactive php in the terminal
 -i 
     -php info    
+
+df 
+    -disk usage
 
 top
     -displays processor activity
